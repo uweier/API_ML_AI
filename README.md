@@ -75,7 +75,7 @@
 ## 使用水平
 核心功能所应用的API之输入及输出
 - [驾驶行为分析API](https://github.com/uweier/API_ML_AI/blob/master/drive_api.ipynb)
-- 
+- [驾驶路径规划API](https://github.com/uweier/API_ML_AI/blob/master/driving_api.ipynb)
 
 #### 驾驶行为分析API
 输入不同的司机驾驶图片，会得到关于司机是否双手离开方向盘、使用手机、不系安全带、目视前方、抽烟的数值。
@@ -83,6 +83,9 @@
 其中的“score”为判断的数值，数值越接近0，则表示“否”，数值越接近1，则表示“是”。
 ![driver_code](https://upload-images.jianshu.io/upload_images/9460722-79752669265cf4b6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+#### 驾驶路径规划API
+输入起点与终点即可得到最佳的路径规划。
+![drivering_code](https://upload-images.jianshu.io/upload_images/9460722-9b798bfccc033b01.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 使用比较分析
 使用比较分析：在PRD文件中是否有说明且提供连结证据，所使用的API是查找过最适用的（主要竞争者无或比较次），如考量其成熟度丶性价比丶等等
