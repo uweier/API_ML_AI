@@ -56,11 +56,27 @@
 |2|中|司机在驾驶过程中突然需要使用导航|高德地图-[驾车路径规划API](https://lbs.amap.com/api/webservice/guide/api/direction#driving)、语音识别API、语音合成API|
 
 # 原型
+### 产品架构图
+![产品架构图](https://upload-images.jianshu.io/upload_images/9460722-abf69f70ee624b6c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+### 产品流程图
+![产品流程图](https://upload-images.jianshu.io/upload_images/9460722-01f1a11bd7706509.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 ## 交互及界面设计
 交互及界面设计：在PRD文件中是否有说明且原型是否有做到：交互及界面设计的某个核心交互环节使用了人工智能的加值
 
 ## 信息设计
 信息设计：在PRD文件中是否有说明且原型是否有做到：信息设计的某个核心信息或设计使用了人工智能的加值
+![1.png](https://upload-images.jianshu.io/upload_images/9460722-3da3c471d1a72e46.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![2.png](https://upload-images.jianshu.io/upload_images/9460722-77d292f133731d1c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![3.png](https://upload-images.jianshu.io/upload_images/9460722-f88922c1dd0697d5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![4.png](https://upload-images.jianshu.io/upload_images/9460722-fab7902e9814273e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![5.png](https://upload-images.jianshu.io/upload_images/9460722-fb881b6c332bc741.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![6.png](https://upload-images.jianshu.io/upload_images/9460722-65a728fde33434fe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ## 原型文档
 原型文档：多少程度上有提供MVP可交互的原型文档，供它人在Github上下载使用
@@ -79,7 +95,7 @@
 核心功能所应用的API之输入及输出代码
 - [驾驶行为分析API](https://github.com/uweier/API_ML_AI/blob/master/drive_api.ipynb)
 - [驾驶路径规划API](https://github.com/uweier/API_ML_AI/blob/master/driving_api.ipynb)
-- 
+- [语音识别与语音合成API](https://github.com/uweier/API_ML_AI/blob/master/speech.ipynb)
 
 #### 百度驾驶行为分析API
 输入不同的司机驾驶图片，输出关于司机是否双手离开方向盘、使用手机、不系安全带、目视前方、抽烟的数值。
@@ -88,14 +104,14 @@
 ![driver_code](https://upload-images.jianshu.io/upload_images/9460722-79752669265cf4b6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### 百度语音合成API
-代码见：
+代码见： [语音识别与语音合成API](https://github.com/uweier/API_ML_AI/blob/master/speech.ipynb)
 
 输入文字，输出音频文件，以下为输出代码：
 
 ![speech synthesis1](https://upload-images.jianshu.io/upload_images/9460722-936dbc5774989f49.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### 百度语音识别API
-代码见：
+代码见： [语音识别与语音合成API](https://github.com/uweier/API_ML_AI/blob/master/speech.ipynb)
 
 输入音频文件，输出文字，以下为输出代码：
 
@@ -116,6 +132,26 @@
 
 ![drive_fee3](https://upload-images.jianshu.io/upload_images/9460722-371c10b54ed1d57d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+#### 百度语音合成API分析
+|对比项|百度|微软Azure|讯飞|
+|---|---|---|---|
+|成熟度||||
+|准确度||||
+|性价比||||
+|使用难度||||
+|优点||||
+|缺点||||
+
+
+#### 百度语音识别API分析
+|对比项|百度|微软Azure|讯飞|
+|---|---|---|---|
+|成熟度||||
+|准确度||||
+|性价比||||
+|使用难度||||
+|优点||||
+|缺点||||
 
 ## 使用后风险报告
 使用后风险报告：在PRD文件中是否有说明且提供连结证据，所使用的API类别的现在及未来发展性，如API市场竞争程度丶输入输出限制丶定价丶及可替代的程序库（改用自己开发的代码及数据库而不用API）等等
@@ -135,4 +171,4 @@
 核心功能所应用的API之输入及输出代码
 - [驾驶行为分析API](https://github.com/uweier/API_ML_AI/blob/master/drive_api.ipynb)
 - [驾驶路径规划API](https://github.com/uweier/API_ML_AI/blob/master/driving_api.ipynb)
-- [语音识别与语音合成API]()
+- [语音识别与语音合成API](https://github.com/uweier/API_ML_AI/blob/master/speech.ipynb)
