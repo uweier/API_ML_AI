@@ -88,6 +88,115 @@
 其中的“score”为判断的数值，数值越接近0，则表示“否”，数值越接近1，则表示“是”。
 ![driver_code](https://upload-images.jianshu.io/upload_images/9460722-79752669265cf4b6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+#### 百度语音合成API
+```
+# coding=utf-8
+import sys
+import json
+
+IS_PY3 = sys.version_info.major == 3
+
+if IS_PY3:
+    from urllib.request import urlopen
+    from urllib.request import Request
+    from urllib.error import URLError
+    from urllib.parse import urlencode
+    from urllib.parse import quote_plus
+else:
+    import urllib2
+    from urllib import quote_plus
+    from urllib2 import urlopen
+    from urllib2 import Request
+    from urllib2 import URLError
+    from urllib import urlencode
+
+API_KEY = 'Nc8qeti23Pi9qRtfHONjwlRH'
+SECRET_KEY = 'toGHyd0ra1dDL8VGq8o6rDBa47Iq7caL'
+TEXT = "每天都要加油呀。"
+
+# 发音人选择, 基础音库：0为度小美，1为度小宇，3为度逍遥，4为度丫丫，
+# 精品音库：5为度小娇，103为度米朵，106为度博文，110为度小童，111为度小萌，默认为度小美 
+PER = 4
+# 语速，取值0-15，默认为5中语速
+SPD = 5
+# 音调，取值0-15，默认为5中语调
+PIT = 5
+# 音量，取值0-9，默认为5中音量
+VOL = 5
+# 下载的文件格式, 3：mp3(default) 4： pcm-16k 5： pcm-8k 6. wav
+AUE = 3
+
+FORMATS = {3: "mp3", 4: "pcm", 5: "pcm", 6: "wav"}
+FORMAT = FORMATS[AUE]
+CUID = "123456PYTHON"
+TTS_URL = 'http://tsn.baidu.com/text2audio'
+class DemoError(Exception):
+    pass
+
+"""  TOKEN start """
+TOKEN_URL = 'http://openapi.baidu.com/oauth/2.0/token'
+SCOPE = 'audio_tts_post'  # 有此scope表示有tts能力，没有请在网页里勾选
+
+def fetch_token():
+    print("fetch token begin")
+    params = {'grant_type': 'client_credentials',
+              'client_id': API_KEY,
+              'client_secret': SECRET_KEY}
+    post_data = urlencode(params)
+    if (IS_PY3):
+        post_data = post_data.encode('utf-8')
+    req = Request(TOKEN_URL, post_data)
+    try:
+        f = urlopen(req, timeout=5)
+        result_str = f.read()
+    except URLError as err:
+        print('token http response http code : ' + str(err.code))
+        result_str = err.read()
+    if (IS_PY3):
+        result_str = result_str.decode()
+    print(result_str)
+    result = json.loads(result_str)
+    print(result)
+    if ('access_token' in result.keys() and 'scope' in result.keys()):
+        if not SCOPE in result['scope'].split(' '):
+            raise DemoError('scope is not correct')
+        print('SUCCESS WITH TOKEN: %s ; EXPIRES IN SECONDS: %s' % (result['access_token'], result['expires_in']))
+        return result['access_token']
+    else:
+        raise DemoError('MAYBE API_KEY or SECRET_KEY not correct: access_token or scope not found in token response')
+
+"""  TOKEN end """
+
+if __name__ == '__main__':
+    token = fetch_token()
+    tex = quote_plus(TEXT)  # 此处TEXT需要两次urlencode
+    print(tex)
+    params = {'tok': token, 'tex': tex, 'per': PER, 'spd': SPD, 'pit': PIT, 'vol': VOL, 'aue': AUE, 'cuid': CUID,
+              'lan': 'zh', 'ctp': 1}  # lan ctp 固定参数
+
+    data = urlencode(params)
+    print('test on Web Browser' + TTS_URL + '?' + data)
+    req = Request(TTS_URL, data.encode('utf-8'))
+    has_error = False
+    try:
+        f = urlopen(req)
+        result_str = f.read()
+        headers = dict((name.lower(), value) for name, value in f.headers.items())
+        has_error = ('content-type' not in headers.keys() or headers['content-type'].find('audio/') < 0)
+    except  URLError as err:
+        print('asr http response http code : ' + str(err.code))
+        result_str = err.read()
+        has_error = True
+    save_file = "error.txt" if has_error else 'result.' + FORMAT
+    with open(save_file, 'wb') as of:
+        of.write(result_str)
+    if has_error:
+        if (IS_PY3):
+            result_str = str(result_str, 'utf-8')
+        print("tts api  error:" + result_str)
+    print("result saved as :" + save_file)
+```
+
 #### 驾驶路径规划API
 输入起点与终点即可得到最佳的路径规划。
 ![drivering_code](https://upload-images.jianshu.io/upload_images/9460722-9b798bfccc033b01.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -95,7 +204,7 @@
 ## 使用比较分析
 使用比较分析：在PRD文件中是否有说明且提供连结证据，所使用的API是查找过最适用的（主要竞争者无或比较次），如考量其成熟度丶性价比丶等等
 #### 百度驾驶行为分析API分析
-目前，只找到[百度AI开放平台](https://ai.baidu.com/tech/body/driver)的**驾驶行为分析API**。其定价如下图，该调用量足以使用提供日常的学习，性价比较高。但是对图片有一定的要求，人体必须清晰可见，且服务只适用于车载司机场景，使用网图、非车载场景的普通监控图片、或者乘客的监控图片测试，测试效果会不准。
+目前，只找到[百度AI开放平台](https://ai.baidu.com/tech/body/driver)的**驾驶行为分析API**。其定价如下图，该调用量足以提供日常学习的使用，性价比较高。但是对图片有一定的要求，人体必须清晰可见，且服务只适用于车载司机场景，使用网图、非车载场景的普通监控图片、或者乘客的监控图片测试，测试效果会不准，所以还不够成熟。
 
 ![drive_fee1](https://upload-images.jianshu.io/upload_images/9460722-b7a294047ba8a87b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -107,6 +216,9 @@
 ## 使用后风险报告
 使用后风险报告：在PRD文件中是否有说明且提供连结证据，所使用的API类别的现在及未来发展性，如API市场竞争程度丶输入输出限制丶定价丶及可替代的程序库（改用自己开发的代码及数据库而不用API）等等
 
+#### 百度驾驶行为分析API
+- 随着滴滴、出租车、公交车等运营车辆行业的发展及各类安全事故的发生，驾驶行为分析及其相关的API需求将增加。
+- 其输出结果的判断依据还需完善，仅仅依据双手离开方向盘、使用手机、不系安全带、目视前方、抽烟这五个点来判断司机的驾驶行为还不够全面。还应考虑闭眼时长、吃东西等方面的危险驾驶行为。
 
 
 ## 加分项
