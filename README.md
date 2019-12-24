@@ -31,8 +31,8 @@
 
 ## 核心价值（最小可行性）
 1. 能够检测司机的危险驾驶行为，并对司机发出危险提示信号
-2. 可通过语音识别功能在APP内进行任何操作，如，接听电话、搜索地址等
-3. 提供地图导航功能
+2. 提供地图导航功能
+3. 可通过语音识别功能在APP内进行任何操作，如，接听电话、搜索地址等
 
 ## 核心价值与用户痛点
 痛点一：司机独自一人疲劳驾驶时无人提醒，不得不通过抽烟、吃零食的方式提神
@@ -44,17 +44,14 @@
 ## 人工智能概率性与用户痛点
 人工智能的准确率并不是百分百的，所以API可能出现以下的问题：
 - 驾驶行为分析API：错误识别司机的驾驶行为，在司机正常驾驶的过程中不断发出警告，进而影响司机正常驾驶。
-- 
+- 驾车路径规划API：路径规划有误，道路改建，API没有及时更新，导致司机走错路。
 
 ## 需求列表与人工智能API加值
 
-||用户案例|API|重要程度|
+||优先级|需求|API的使用|
 |---|---|---|---|
-|1|用户需要在自己有危险驾驶行为时得到提醒|百度 驾驶行为分析API|重要|
-|2|车辆运营公司需要监控司机的驾驶|百度 驾驶行为分析API|次重要|
-|3|驾驶过程中司机需要搜索导航|高德地图 路径规划API|次重要|
-|4|用户形式过程中的实时记录缓存问题|阿里云 智能云相册|较不重要|
-
+|1|高|用户需要在自己有危险驾驶行为时得到提醒|百度-[驾驶行为分析](https://ai.baidu.com/tech/body/driver)|
+|2|中|驾驶过程中司机突然需要使用导航|高德地图-[驾车路径规划API](https://lbs.amap.com/api/webservice/guide/api/direction#driving)|
 
 # 原型
 ## 交互及界面设计
@@ -70,14 +67,23 @@
 口头操作说明：多少程度上在2-3分钟时间限制内，对听众留下了「的确这是个可行丶可用的人工智能加值产品」的印象
 
 # API 产品使用关键AI或机器学习之API的输出入展示
-
-百度API[驾驶行为分析](https://ai.baidu.com/tech/body/driver)
-[离线语音合成](https://ai.baidu.com/tech/speech/tts_offline)
+## 所使用的API
+- 百度API[驾驶行为分析](https://ai.baidu.com/tech/body/driver)
+- 高德地图API[驾车路径规划API](https://lbs.amap.com/api/webservice/guide/api/direction#driving)
+[在线语音合成](https://ai.baidu.com/tech/speech/tts)
 
 ## 使用水平
 核心功能所应用的API之输入及输出
+- [驾驶行为分析API](https://github.com/uweier/API_ML_AI/blob/master/drive_api.ipynb)
+- 
 
-[驾驶行为分析API代码](https://github.com/uweier/API_ML_AI/blob/master/drive_api.ipynb)
+#### 驾驶行为分析API
+输入不同的司机驾驶图片，会得到关于司机是否双手离开方向盘、使用手机、不系安全带、目视前方、抽烟的数值。
+
+其中的“score”为判断的数值，数值越接近0，则表示“否”，数值越接近1，则表示“是”。
+![driver_code](https://upload-images.jianshu.io/upload_images/9460722-79752669265cf4b6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
 ## 使用比较分析
 使用比较分析：在PRD文件中是否有说明且提供连结证据，所使用的API是查找过最适用的（主要竞争者无或比较次），如考量其成熟度丶性价比丶等等
 
