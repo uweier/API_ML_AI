@@ -1,4 +1,8 @@
-# 安全行APP
+
+<div align="center">
+  <h1>安全行APP</h1>
+</div>
+
 ### Product Requirements
 |Target release|2019-12|
 |---|---|
@@ -55,7 +59,11 @@
 |2|中|司机在驾驶过程中突然需要使用导航|高德地图-[驾车路径规划API](https://lbs.amap.com/api/webservice/guide/api/direction#driving)、语音识别API、语音合成API|
 
 # 原型
-若图片加载不出，请点击查看[原型文档]()
+## 原型文档
+[**原型文档下载**](https://github.com/uweier/API_ML_AI/tree/master/%E5%AE%89%E5%85%A8%E8%A1%8CAPP)
+
+若图片加载不出，或体验交互效果，请点击查看[原型](https://nfunm034.gitee.io/api_ml_al_final)
+
 ## 信息设计
 - 在驾驶行为分析中，使用了驾驶行为分析API的监测功能
 - 在驾驶行为分析中，使用了语音识别API和语音合成API的功能
@@ -90,10 +98,6 @@
 ![路径规划语音功能1](https://github.com/uweier/API_ML_AI/blob/master/API_image/lujing_yuyin1.png)
 
 ![路径规划语音功能2](https://github.com/uweier/API_ML_AI/blob/master/API_image/lujing_yuyin2.png)
-
-## 原型文档
-原型文档：多少程度上有提供MVP可交互的原型文档，供它人在Github上下载使用
-[原型文档查看](https://nfunm034.gitee.io/api_final)
 
 ## 口头操作说明
 大家好，今天为大家介绍一款安全行APP，这款APP基于为司机保驾护航目的，监测司机的驾驶过程，识别、分析出司机危险驾驶行为，并通过语音合成向司机发出“口头”警告。同时，司机还可以在监测开始之后，通过语音识别的方式进入路径规划页面，使用语音输入起点和终点，开启路径规划功能。为司机带来便利的同时又不忽视交通安全问题。
