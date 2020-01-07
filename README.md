@@ -61,7 +61,8 @@
 
 # 原型
 ## 原型文档
-[**原型文档下载**](https://github.com/uweier/API_ML_AI/tree/master/%E5%AE%89%E5%85%A8%E8%A1%8CAPP)
+[**原型文档**](https://github.com/uweier/API_ML_AI/tree/master/%E5%AE%89%E5%85%A8%E8%A1%8CAPP)
+[**安全行APP.rp文档下载**](https://github.com/uweier/API_ML_AI/blob/master/%E5%AE%89%E5%85%A8%E8%A1%8CAPP_recovered.rp)
 
 图片加载不出？想体验交互效果？请点击查看[原型](https://nfunm034.gitee.io/api_ml_al_final)
 
