@@ -4,10 +4,10 @@
 </div>
 
 ### Product Requirements
-|Target release|2019-12|
+|Target release|2020-1|
 |---|---|
 |Epic|安全行APP|
-|Document status|正在进行|
+|Document status|已完成|
 |Document owner、Designer、Developer、QA|黄煜惠|
 
 # PRD价值主张设计
@@ -157,7 +157,7 @@
 
 ![drive_fee2](https://upload-images.jianshu.io/upload_images/9460722-371c10b54ed1d57d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-- 随着滴滴、出租车、公交车等运营车辆行业的发展及各类安全事故的发生，驾驶行为分析及其相关的API需求将增加。
+- 随着滴滴、出租车、公交车等运营车辆行业的发展及各类交通安全事故的发生，驾驶行为分析及其相关的API需求将增加，所以具有发展性。
 - 其输出结果的判断依据还需完善，仅仅依据双手离开方向盘、使用手机、不系安全带、目视前方、抽烟这五个点来判断司机的驾驶行为还不够全面。还应考虑闭眼时长、吃东西等方面的危险驾驶行为。
 
 
@@ -171,7 +171,7 @@
 |成熟度|高|高|高|
 |准确度|高|高|高|
 |性价比|高|中|低|
-
+|发展性|高|高|高|
 
 
 ### 语音合成API分析
@@ -184,7 +184,7 @@
 |成熟度|高|高|高|
 |准确度|高|高|高|
 |性价比|高|低|中|
-
+|发展性|高|高|高|
 
 
 ## 加分项
