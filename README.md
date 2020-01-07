@@ -55,27 +55,41 @@
 |2|中|司机在驾驶过程中突然需要使用导航|高德地图-[驾车路径规划API](https://lbs.amap.com/api/webservice/guide/api/direction#driving)、语音识别API、语音合成API|
 
 # 原型
+若图片加载不出，请点击查看[原型文档]()
+## 信息设计
+- 在驾驶行为分析中，使用了驾驶行为分析API的监测功能
+- 在驾驶行为分析中，使用了语音识别API和语音合成API的功能
+- 在路径规划中，使用了语音识别API和语音合成API的功能
+
 ### 产品架构图
-![产品架构图](https://upload-images.jianshu.io/upload_images/9460722-abf69f70ee624b6c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![产品架构图](https://github.com/uweier/API_ML_AI/blob/master/API_image/jiagou.png)
+
 ### 产品流程图
-![产品流程图](https://upload-images.jianshu.io/upload_images/9460722-01f1a11bd7706509.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![产品功能流程图](https://github.com/uweier/API_ML_AI/blob/master/API_image/liucheng.png)
 
 ## 交互及界面设计
-交互及界面设计：在PRD文件中是否有说明且原型是否有做到：交互及界面设计的某个核心交互环节使用了人工智能的加值
-![1.png](https://upload-images.jianshu.io/upload_images/9460722-3da3c471d1a72e46.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![2.png](https://upload-images.jianshu.io/upload_images/9460722-77d292f133731d1c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+驾驶行为监测功能：
 
-![3.png](https://upload-images.jianshu.io/upload_images/9460722-f88922c1dd0697d5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![驾驶行为监测1](https://github.com/uweier/API_ML_AI/blob/master/API_image/jiashi1.png)
 
-![4.png](https://upload-images.jianshu.io/upload_images/9460722-fab7902e9814273e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![驾驶行为监测2](https://github.com/uweier/API_ML_AI/blob/master/API_image/jiashi2.png)
 
-![5.png](https://upload-images.jianshu.io/upload_images/9460722-fb881b6c332bc741.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+驾驶行为监测语音功能：
 
-![6.png](https://upload-images.jianshu.io/upload_images/9460722-65a728fde33434fe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![驾驶行为监测语音功能1](https://github.com/uweier/API_ML_AI/blob/master/API_image/jiashi_yuyin1.png)
 
-## 信息设计
-信息设计：在PRD文件中是否有说明且原型是否有做到：信息设计的某个核心信息或设计使用了人工智能的加值
+![驾驶行为监测语音功能2](https://github.com/uweier/API_ML_AI/blob/master/API_image/jiashi_yuyin2.png)
+
+路径规划功能：
+
+![路径规划功能](https://github.com/uweier/API_ML_AI/blob/master/API_image/lujing1.png)
+
+路径规划语音功能：
+
+![路径规划语音功能1](https://github.com/uweier/API_ML_AI/blob/master/API_image/lujing_yuyin1.png)
+
+![路径规划语音功能2](https://github.com/uweier/API_ML_AI/blob/master/API_image/lujing_yuyin2.png)
 
 ## 原型文档
 原型文档：多少程度上有提供MVP可交互的原型文档，供它人在Github上下载使用
