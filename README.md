@@ -11,21 +11,6 @@
 |Document owner、Designer、Developer、QA|黄煜惠|
 
 
-## 目录
-- [PRD价值主张设计](# PRD价值主张设计)
-    - [背景](## 背景)
-    - [目标](## 目标)
-    - [目标用户](## 目标用户)
-    - [加值宣言](## 加值宣言)
-    - [核心价值（最小可行性）](## 核心价值（最小可行性）)
-    - [核心价值与用户痛点](## 核心价值与用户痛点)
-    - [人工智能概率性与用户痛点](## 人工智能概率性与用户痛点)
-    - [需求列表与人工智能API加值](## 需求列表与人工智能API加值)
-- [原型](# 原型)
-    - [原型文档](## 原型文档)
-
-
-
 # PRD价值主张设计
 ## 背景
 交通安全问题被屡屡提起，但是每年仍有很多交通事故发生，原因大多是司机的驾驶行为不当，例如在行驶过程中使用手机、抽烟、不系安全带、双手离开方向盘等等。我们无法保证每一位司机都有足够的安全意识，即使有的司机安全意识高，但也难免会在一些特殊情况下存在驾驶不当的行为，如疲劳驾驶时。
@@ -145,7 +130,7 @@
 输入不同的司机驾驶图片，输出关于司机是否双手离开方向盘、使用手机、不系安全带、目视前方、抽烟的数值。
 
 其中的“score”为判断的数值，数值越接近0，则表示“否”，数值越接近1，则表示“是”。
-![driver_code](https://upload-images.jianshu.io/upload_images/9460722-79752669265cf4b6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![driver_code](https://github.com/uweier/API_ML_AI/blob/master/API_image/driver_code.png)
 
 #### 百度语音合成API
 代码见： [语音识别与语音合成API](https://github.com/uweier/API_ML_AI/blob/master/speech.ipynb)
@@ -163,15 +148,15 @@
 
 #### 高德驾驶路径规划API
 输入起点与终点即可得到最佳的路径规划。
-![drivering_code](https://upload-images.jianshu.io/upload_images/9460722-9b798bfccc033b01.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![drivering_code](https://github.com/uweier/API_ML_AI/blob/master/API_image/driving_code1.png)
 
 ## 使用比较分析与使用后风险报告
 ### 百度驾驶行为分析API分析
 目前，只找到[百度AI开放平台](https://ai.baidu.com/tech/body/driver)的**驾驶行为分析API**。其定价如下图，该免费调用量足以提供个人日常学习和企业测试的使用，但是对于企业正式开发使用，价格还是较高的。而且对图片有一定的要求，人体必须清晰可见，且服务只适用于车载司机场景，使用网图、非车载场景的普通监控图片、或者乘客的监控图片测试，测试效果会不准。
 
-![drive_fee1](https://upload-images.jianshu.io/upload_images/9460722-b7a294047ba8a87b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![drive_fee1](https://github.com/uweier/API_ML_AI/blob/master/API_image/drive_fee1.png)
 
-![drive_fee2](https://upload-images.jianshu.io/upload_images/9460722-371c10b54ed1d57d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![drive_fee2](https://github.com/uweier/API_ML_AI/blob/master/API_image/drive_fee2.png)
 
 - 随着滴滴、出租车、公交车等运营车辆行业的发展及各类交通安全事故的发生，驾驶行为分析及其相关的API需求将增加，所以具有发展性。
 - 其输出结果的判断依据还需完善，仅仅依据双手离开方向盘、使用手机、不系安全带、目视前方、抽烟这五个点来判断司机的驾驶行为还不够全面。还应考虑闭眼时长、吃东西等方面的危险驾驶行为。
