@@ -163,27 +163,27 @@
 
 
 ### 语音识别API分析
-|对比项|百度|微软Azure|讯飞|
+|对比项|[百度](https://ai.baidu.com/tech/speech/asr)|[微软Azure](https://azure.microsoft.com/zh-cn/pricing/details/cognitive-services/speech-services/)|[讯飞](https://www.xfyun.cn/services/voicedictation)|
 |---|:---:|:---:|:---:|
 |功能/特色|多语种和多方言识别、深度语义解析|自定义的语音识别、灵活的部署|支持多种语种和方言、支持垂直领域和应用级听写|
 |价格|基础（免费）、付费版（80元/QPS/天）|基础（每月5小时免费）、标准（每小时音频 $1）|基础（一年免费 需个人认证）、低配版套餐（40元/万次/年）|
 |接口|API、SDK|SDK|API、SDK|
 |使用难度|低（有python示例代码）|中（有python SDK示例代码）|中（有调用示例）|
 |成熟度|高|高|高|
-|准确度|中|高|高|
-|性价比|高|中|低|
+|准确度|中，偶有不准确|高|高|
+|性价比|高|低|低|
 |发展性|高|高|高|
 
 
 ### 语音合成API分析
-|对比项|百度|微软Azure|讯飞|
+|对比项|[百度](https://ai.baidu.com/tech/speech/tts)|[微软Azure](https://azure.microsoft.com/zh-cn/pricing/details/cognitive-services/speech-services/)|[讯飞](https://www.xfyun.cn/services/online_tts)|
 |---|:---:|:---:|:---:|
 |功能/特色|多场景音库、语速、音调可调节|逼真的语音、全球参与、自定义体验|专属的语音个性定制|
 |价格|基础（免费）、付费版（600-1000元/QPS/天）|基础（每月 500 万个字符免费）、标准（每 100 万个字符 $4）|基础（一年免费 需个人认证）、低配版套餐（58元/万次/年）|
 |接口|API、SDK|SDK|API、SDK|
 |使用难度|低（有python示例代码）|低（有python SDK示例代码）|中（有调用示例）|
 |成熟度|高|高|高|
-|准确度|中|高|高|
+|准确度|中，偶有不准确|高|高|
 |性价比|高|低|中|
 |发展性|高|高|高|
 
