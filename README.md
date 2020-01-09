@@ -3,6 +3,11 @@
   <h1>安全行APP</h1>
 </div>
 
+### 20*20
+
+- [ppt](https://github.com/uweier/API_ML_AI/blob/master/%E5%AE%89%E5%85%A8%E8%A1%8CAPP.pptx)
+- [在线查看演说](https://pan.baidu.com/s/1uw6OSlWXaK5QsuDGqP-shA)
+
 ### Product Requirements
 |Target release|2020-1|
 |---|---|
