@@ -85,7 +85,7 @@
 ![产品功能流程图](https://github.com/uweier/API_ML_AI/blob/master/API_image/liucheng.png)
 
 ## 交互及界面设计
-[交互](https://nfunm034.gitee.io/api_ml_al_final/#g=1&p=%E9%A9%BE%E9%A9%B6%E7%9B%91%E6%B5%8B%E5%89%8D)
+[查看交互效果](https://nfunm034.gitee.io/api_ml_al_final/#g=1&p=%E9%A9%BE%E9%A9%B6%E7%9B%91%E6%B5%8B%E5%89%8D)
 
 驾驶行为监测功能：
 
@@ -126,10 +126,10 @@
 - 百度API[短语音识别](https://ai.baidu.com/tech/speech/asr)
 
 ## 使用水平
-核心功能所应用的API之输入及输出代码
-- [驾驶行为分析API](https://github.com/uweier/API_ML_AI/blob/master/drive_api.ipynb)
-- [驾驶路径规划API](https://github.com/uweier/API_ML_AI/blob/master/driving_api.ipynb)
-- [语音识别与语音合成API](https://github.com/uweier/API_ML_AI/blob/master/speech.ipynb)
+核心功能所应用的API之输入及输出代码（若图片看不了，请刷新几次或点击以下链接直接查看代码，谢谢）
+- [驾驶行为分析API代码](https://github.com/uweier/API_ML_AI/blob/master/drive_api.ipynb)
+- [驾驶路径规划API代码](https://github.com/uweier/API_ML_AI/blob/master/driving_api.ipynb)
+- [语音识别与语音合成API代码](https://github.com/uweier/API_ML_AI/blob/master/speech.ipynb)
 
 #### 百度驾驶行为分析API
 输入不同的司机驾驶图片，输出关于司机是否双手离开方向盘、使用手机、不系安全带、目视前方、抽烟的数值。
