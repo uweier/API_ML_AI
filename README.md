@@ -142,14 +142,14 @@
 
 输入文字，输出音频文件，以下为输出代码：
 
-![speech synthesis1](https://upload-images.jianshu.io/upload_images/9460722-936dbc5774989f49.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![speech synthesis1](https://github.com/uweier/API_ML_AI/blob/master/API_image/speech%20synthesis1.png)
 
 #### 百度语音识别API
 代码见： [语音识别与语音合成API](https://github.com/uweier/API_ML_AI/blob/master/speech.ipynb)
 
 输入音频文件，输出文字，以下为输出代码：
 
-![speech recognition1](https://upload-images.jianshu.io/upload_images/9460722-029070d35719119a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![speech recognition1](https://github.com/uweier/API_ML_AI/blob/master/API_image/speech%20recognition1.png)
 
 #### 高德驾驶路径规划API
 输入起点与终点即可得到最佳的路径规划。
