@@ -71,7 +71,7 @@
 
 [**安全行APP.rp文档下载**](https://github.com/uweier/API_ML_AI/blob/master/%E5%AE%89%E5%85%A8%E8%A1%8CAPP_recovered.rp)
 
-图片加载不出？想体验交互效果？请点击查看[原型](https://nfunm034.gitee.io/api_ml_al_final)
+[**原型入口**](https://nfunm034.gitee.io/api_ml_al_final)
 
 ## 信息设计
 - 在驾驶行为分析中，使用了驾驶行为分析API的监测功能
@@ -109,14 +109,6 @@
 
 ![路径规划语音功能2](https://github.com/uweier/API_ML_AI/blob/master/API_image/lujing_yuyin2.png)
 
-## 口头操作说明
-**1句话版本**
-
-这款安全行APP的主要功能是通过驾驶行为分析API检测司机的危险驾驶行为，除此之外，还有语音合成、语音识别、驾车路径规划的功能。
-
-**1分钟版本**
-
-这款APP基于为司机保驾护航目的，监测司机的驾驶过程，识别、分析出司机危险驾驶行为，并通过语音合成向司机发出“口头”警告。同时，司机还可以在行车过程中，通过语音识别的方式进入路径规划页面，使用语音输入起点和终点，开启路径规划功能。为司机带来便利的同时又不忽视交通安全问题。
 
 # API 产品使用关键AI或机器学习之API的输出入展示
 ## 所使用的API
